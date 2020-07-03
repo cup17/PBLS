@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragment.home.HomeFragment">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_main_banner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="P B L S"
+            android:textColor="@android:color/black"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/tv_nama"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end|bottom"
+            android:layout_marginStart="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/name_background"
+            android:paddingHorizontal="20dp"
+            android:paddingVertical="2dp"
+            android:text="Nama pengguna"
+            android:textColor="@android:color/black" />
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/cmv_home_profile"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/ic_launcher" />
+
+    </FrameLayout>
+
+    <Spinner
+        android:id="@+id/spn_menu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
+
+        <ToggleButton
+            android:id="@+id/tbt_emergency_button"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textOn="Sedang membagikan lokasi darurat"
+            android:textOff="Aktifkan lokasi darurat"
+            android:paddingHorizontal="10dp"
+            android:textSize="17sp"
+            android:gravity="center_horizontal"
+            android:text="Emergency Button"
+            android:textAlignment="center"
+            android:drawableTop="@drawable/ic_panic"
+            android:textColor="@android:color/black"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:background="@drawable/white_edged_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/spn_menu"/>
+
+    <Button
+        android:id="@+id/btn_losfon"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/white_edged_background"
+        android:drawableTop="@drawable/ic_losfon"
+        android:layout_marginTop="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="10dp"
+        android:text="Lost and found"
+        android:textAllCaps="false"
+        android:textSize="17sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tbt_emergency_button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
